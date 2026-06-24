@@ -1,0 +1,8 @@
+[phases.install]
+cmds = ["npm ci --prefer-offline || npm install"]
+
+[phases.build]
+cmds = ["npm run build"]
+
+[start]
+cmd = "npx serve dist -l 3000"
