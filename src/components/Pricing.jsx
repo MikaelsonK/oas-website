@@ -131,7 +131,7 @@ export default function Pricing() {
         }}>
           <span style={{ fontSize: 18, flexShrink: 0, marginTop: 1 }}>📋</span>
           <p style={{ fontSize: 13, color: '#6b5a2e', lineHeight: 1.75, margin: 0 }}>
-            <strong>Note:</strong> All pricing indicated above is preliminary and subject to further validation. As a government institution, your hospital may have existing infrastructure, domain arrangements, or procurement requirements that could affect the final cost breakdown. Adjustments will be made accordingly in coordination with your administration prior to any formal agreement.
+            <strong>Note:</strong> All pricing indicated above is preliminary and subject to further validation. Your institution may have existing infrastructure, domain arrangements, or procurement requirements that could affect the final cost breakdown. Adjustments will be made accordingly in coordination with your administration prior to any formal agreement.
           </p>
         </div>
       </div>
