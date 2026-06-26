@@ -6,10 +6,9 @@ const oneTimeItems = [
 ]
 
 const annualItems = [
-  { item: 'Vercel Pro (web hosting)', monthly: '₱1,200', annual: '₱14,400' },
-  { item: 'Database hosting', monthly: '₱1,100', annual: '₱13,200' },
-  { item: 'Domain & SSL', monthly: '₱100', annual: '₱1,200' },
-  { item: 'Technical support', monthly: '₱600', annual: '₱7,200' },
+  { item: 'Software Maintenance', desc: 'Updates, bug fixes, security patches', monthly: '₱2,000', annual: '₱24,000' },
+  { item: 'Technical Support', desc: 'Priority response, all roles covered', monthly: '₱2,500', annual: '₱30,000' },
+  { item: 'Infrastructure Management', desc: 'Hosting, database, domain & SSL', monthly: '₱500', annual: '₱6,000' },
 ]
 
 const tdStyle = { padding: '14px 16px', borderBottom: '1px solid #f3f4f6', fontSize: 14, color: '#374151' }
@@ -91,9 +90,12 @@ export default function Pricing() {
                   </tr>
                 </thead>
                 <tbody>
-                  {annualItems.map(({ item, monthly, annual }) => (
+                  {annualItems.map(({ item, desc, monthly, annual }) => (
                     <tr key={item}>
-                      <td style={{ ...tdStyle, fontWeight: 500 }}>{item}</td>
+                      <td style={tdStyle}>
+                        <div style={{ fontWeight: 600, color: '#111827' }}>{item}</div>
+                        <div style={{ fontSize: 12, color: '#9ca3af', marginTop: 2 }}>{desc}</div>
+                      </td>
                       <td style={{ ...tdStyle, textAlign: 'right', color: '#6b7280' }}>{monthly}</td>
                       <td style={{ ...tdStyle, textAlign: 'right', fontWeight: 600 }}>{annual}</td>
                     </tr>
@@ -105,11 +107,14 @@ export default function Pricing() {
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                   <div style={{ fontWeight: 800, fontSize: 16, color: '#111827' }}>Total</div>
                   <div style={{ textAlign: 'right' }}>
-                    <span style={{ fontWeight: 900, fontSize: 22, color: '#111827' }}>₱36,000</span>
-                    <span style={{ fontSize: 12, color: '#9ca3af', display: 'block' }}>₱3,000 / month</span>
+                    <span style={{ fontWeight: 900, fontSize: 22, color: '#111827' }}>₱60,000</span>
+                    <span style={{ fontSize: 12, color: '#9ca3af', display: 'block' }}>₱5,000 / month</span>
                   </div>
                 </div>
               </div>
+              <p style={{ fontSize: 12, color: '#9ca3af', margin: '12px 16px 0', lineHeight: 1.6 }}>
+                * Direct infrastructure costs (hosting, database, domain) are billed separately at ~₱28,800/year.
+              </p>
             </div>
           </div>
         </div>
